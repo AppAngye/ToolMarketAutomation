@@ -1,0 +1,37 @@
+Feature: Venta online de herramientas de construcción
+
+  Como maestro de construcción
+  quiero comprar herramientas y maquinarias online
+  para evitar ir a tienda física y acceder a promociones.
+
+  @TC1
+  Scenario: Compra de 2 herramientas para un cliente nuevo sin registrar
+    Given que un CLIENTE ingresa a la página web de TOOLSHOPDEMO
+    When filtre por una categoria "Power Tools"
+    And selecciona una herramienta de la lista: "Circular Saw"
+    And luego de revisar el detalle añade al carrito de compras
+    And verifica el mensaje "Product added to shopping cart"
+    And selecciona en el menu categorias  la opcion "Otros"
+    And selecciona de la lista el producto "Protective Globes"
+    And selecciona el carrito de compras
+    And verifica que los productos esten correctos "Circular Saw", "1", "Protective Globes","1"
+    And selecciona en proceder pago
+    And selecciona en registrar tu cuenta
+    And completa el formulario del registro
+      | nombre |  | apellido  |  | fecha de nacimiento |  | direccion       |  | codigo postal |  | ciudad |  | estado |  | pais |  | telefono  |  | correo                |  | contraseña     |
+      | angye  |  | parimango |  | 22/11/1997          |  | av salaverry571 |  | 13021         |  | lima   |  | lima   |  | peru |  | 978654123 |  | appangye@intercorp.pe |  | Interbank2025. |
+    And inicia sesion
+    And indica los datos de facturacion
+    And elege el metodo de pago
+    And selecciona en pagar
+    Then verifica se haya realizado la compra
+    And el carrito de compras quede vacio
+
+  @TC2
+  Scenario: Mostrar los productos menores a 100 soles ordenados de mayor a menor
+    Given que un CLIENTE ingresa a la página web de TOOLSHOPDEMO
+    When ordena los productps por "Nombre (A-Z)
+    And verifica el primer producto de la lista comienza con A "Adjustable Wrench"
+    And aumenta el rango de precios al maximo
+    Then ordena los productps por "Price (Hig-Low)"
+    And verifica el primer producto de la lista sea "Workbench with Drawers"
