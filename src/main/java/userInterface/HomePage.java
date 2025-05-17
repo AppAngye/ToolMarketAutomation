@@ -7,7 +7,7 @@ public class HomePage {
     public static Target labelTitle = Target.the("title page").located(By.cssSelector("#Layer_1"));
     public static Target categorieButton = Target.the("button categories").locatedBy("//*[@id=\"navbarSupportedContent\"]/ul/li[2]/a");
 
-    public static Target selectCategorie(String count) {
+    public static Target selectCategorie(int count) {
         return Target.the("select categorie").locatedBy("//*[@id=\"navbarSupportedContent\"]/ul/li[2]/ul/li[" + count + "]");
     }
 
@@ -16,10 +16,15 @@ public class HomePage {
     public static Target shopcartButton = Target.the("button shop cart").locatedBy("//*[@id=\"navbarSupportedContent\"]/ul/li[5]/a/fa-icon/svg/path");
     public static Target comboBoxFilter = Target.the("combo box filter").locatedBy("//*[@id=\"filters\"]/form[1]/div/select");
 
-    public static Target listComboBoxFilter(String value) {
-        return Target.the("option combo box").locatedBy("//*[@id=\"filters\"]/form[1]/div/select/option[" + value + "]");
+    public static Target listComboBoxFilter(int count) {
+        return Target.the("option combo box").locatedBy("//*[@id=\"filters\"]/form[1]/div/select/option[" + count + "]");
     }
 
+    public static Target HandToolcheckBox(int count) {
+        return Target.the("check box hand tools").locatedBy("//*[@id=\"filters\"]/fieldset[1]/div[" + count + "]/label/input");
+    }
+
+    public static Target picturesCard(int count) {
+        return Target.the("card products").locatedBy("/html/body/app-root/div/app-overview/div[3]/div[2]/div[1]/a[" + count + "]");
+    }
 }
-
-
