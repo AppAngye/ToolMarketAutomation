@@ -8,14 +8,11 @@ Feature: Venta online de herramientas de construcción
   Scenario: Compra de 2 herramientas para un cliente nuevo sin registrar
     Given que un CLIENTE ingresa a la página web de TOOLSHOPDEMO
     When filtre por una categoria "Power Tools"
-#    And selecciona una herramienta de la lista: "Circular Saw"
-#    And luego de revisar el detalle añade al carrito de compras
-#    And verifica el mensaje "Product added to shopping cart"
-#    And selecciona en el menu categorias  la opcion "Otros"
-#    And selecciona de la lista el producto "Protective Globes"
-#    And selecciona el carrito de compras
-#    And verifica que los productos esten correctos "Circular Saw", "1", "Protective Globes","1"
-#    And selecciona en proceder pago
+    And selecciona una herramienta de la lista "Cordless Drill 12V"
+    And luego añade 3 producto al carrito de compras
+    And verifica el mensaje "Product added to shopping cart."
+    And selecciona el carrito de compras
+    And selecciona en proceder pago
 #    And selecciona en registrar tu cuenta
 #    And completa el formulario del registro
 #      | nombre |  | apellido  |  | fecha de nacimiento |  | direccion       |  | codigo postal |  | ciudad |  | estado |  | pais |  | telefono  |  | correo                |  | contraseña     |

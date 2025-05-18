@@ -1,5 +1,6 @@
 package task;
 
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.environment.EnvironmentSpecificConfiguration;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -22,7 +23,8 @@ public class OpenPageTask implements Task {
         actor.attemptsTo(
                 Open.url(EnvironmentSpecificConfiguration.from(environment).getProperty(propertyUrl))
         );
-        WebUtil.waitTime(5);
+        Serenity.takeScreenshot();
+        WebUtil.waitTime(2);
     }
 
     public static Task openPage(String environment) {
