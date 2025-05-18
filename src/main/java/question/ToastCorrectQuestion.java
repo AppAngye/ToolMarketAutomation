@@ -11,7 +11,8 @@ public class ToastCorrectQuestion implements Question<String> {
     public ToastCorrectQuestion(Target toast) {
         this.toast = toast;
     }
-    public static ToastCorrectQuestion of( Target toast){
+
+    public static ToastCorrectQuestion of(Target toast) {
         return new ToastCorrectQuestion(toast);
     }
 
