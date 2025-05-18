@@ -5,12 +5,7 @@ import org.openqa.selenium.By;
 
 public class HomePage {
     public static Target labelTitle = Target.the("title page").located(By.cssSelector("#Layer_1"));
-    public static Target categoryButton = Target.the("button categories").locatedBy("//*[@id=\"navbarSupportedContent\"]/ul/li[2]/a");
-
-    public static Target selectCategory(int count) {
-        return Target.the("select categorie").locatedBy("//*[@id=\"navbarSupportedContent\"]/ul/li[2]/ul/li[" + count + "]");
-    }
-
+    public static Target loginBtn= Target.the("option login by menuhome").locatedBy("//*[@id=\"navbarSupportedContent\"]/ul/li[4]/a");
     public static Target contactButton = Target.the("button contact").locatedBy("//*[@id=\"navbarSupportedContent\"]/ul/li[3]/a");
     public static Target homePhoto = Target.the("image home").locatedBy("/html/body/app-root/div/app-overview/div[1]/p/img");
     public static Target titleByCategory= Target.the("title category by").locatedBy("//*[@id=\"filters\"]/h4[5]");

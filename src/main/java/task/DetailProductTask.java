@@ -6,15 +6,12 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import question.ToastCorrectQuestion;
-import userInterface.Toast;
 import userInterface.ToolDetail;
 import util.WebUtil;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-import static org.hamcrest.Matchers.equalTo;
 
 public class DetailProductTask implements Task {
     private final int toolCount;

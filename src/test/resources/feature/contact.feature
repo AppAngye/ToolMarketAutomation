@@ -3,7 +3,7 @@
 #  quiero me contacten por motivos especificos
 #  para una mejor atención y solución al inconveniente
 #
-#  @TC4
+#  @TC3
 #  Scenario: Solicitud de contacto con la empresa a traves de su modulo contacto
 #    Given que un CLIENTE ingresa a la página web de TOOLSHOPDEMO
 #    When selecciona la opción "Contacto"

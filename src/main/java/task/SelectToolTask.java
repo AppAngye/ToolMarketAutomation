@@ -23,8 +23,8 @@ public class SelectToolTask implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                WaitUntil.the(HomePage.picturesCard(productName), isVisible()).forNoMoreThan(30).seconds(),
                 Scroll.to(HomePage.picturesCard(productName)),
+                WaitUntil.the(HomePage.picturesCard(productName), isVisible()).forNoMoreThan(30).seconds(),
                 Click.on(HomePage.picturesCard(productName))
         );
         actor.remember("selectedProduct",productName);

@@ -16,7 +16,7 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static org.hamcrest.Matchers.equalTo;
 
-public class SaleShopCartTask implements Task {
+public class CartTask implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
@@ -31,9 +31,14 @@ public class SaleShopCartTask implements Task {
                 seeThat(ValidationShopCartByQuantity.of(ShopCartPage.toolCountInput),equalTo(toolCount))
         );
         Serenity.takeScreenshot();
+        WebUtil.waitTime(2);
+        actor.attemptsTo(
+                Click.on(ShopCartPage.proceedCheckoutButton)
+        );
+        Serenity.takeScreenshot();
         WebUtil.waitTime(5);
     }
     public static Task select(){
-        return instrumented(SaleShopCartTask.class);
+        return instrumented(CartTask.class);
     }
 }

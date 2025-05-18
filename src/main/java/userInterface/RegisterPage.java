@@ -8,11 +8,12 @@ public class RegisterPage {
     public static Target birthDateInput = Target.the("date birth input").locatedBy("//*[@id=\"dob\"]");
     public static Target streetInput = Target.the("address input").locatedBy("//*[@id=\"street\"]");
     public static Target postalCodeInput = Target.the("input postalcode").locatedBy("//*[@id=\"postal_code\"]");
+    public static Target cityInput=Target.the("input city").locatedBy("//*[@id=\"city\"]");
+    public static Target stateInput=Target.the("input state").locatedBy("//*[@id=\"state\"]");
     public static Target countrySelect = Target.the("combo box country").locatedBy("//*[@id=\"country\"]");
-
-    public static Target listCountrySelect(int count) {
-        return Target.the("list countries combo").locatedBy("//*[@id=\"country\"]/option[" + count + "]");
-    }
+//    public static Target listCountrySelect(String  nameCountry) {
+//        return Target.the("list countries combo").locatedBy("//*[@id=\"country\"]/option[contains(text(), '"+nameCountry+"')]\n");
+//    }
 
     public static Target phoneInput = Target.the("input phone").locatedBy("//*[@id=\"phone\"]");
     public static Target emailInput = Target.the("input email").locatedBy("//*[@id=\"email\"]");

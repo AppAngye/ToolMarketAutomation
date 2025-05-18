@@ -11,9 +11,9 @@ import static net.thucydides.core.annotations.ClearCookiesPolicy.BeforeEachTest;
 
 @RunWith(CucumberWithSerenity.class)///Se usará Serenity BDD como motor para ejecutar las pruebas de Cucumber
 @CucumberOptions(
-        features = {"src/test/resources"}, // ruta de archivo feature
-        glue = {"stepDefinition"},//Indica la ruta del paquete Java donde se encuentran las clases con los métodos de los pasos (@Given, @When, @Then).
-        tags = "@TC1" // es el nombre del escenario que vamos a ejecutar
+        features = {"src/test/resources/feature/saleOnlineTools.feature"}, // ruta de archivo feature
+        glue = {"stepDefinition"}//Indica la ruta del paquete Java donde se encuentran las clases con los métodos de los pasos (@Given, @When, @Then).
+//        tags = "@TestCase_1" // es el nombre del escenario que vamos a ejecutar
 )
 public class CucumberWebTest {
     @Managed(uniqueSession = true, clearCookies = BeforeEachTest)
